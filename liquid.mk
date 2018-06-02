@@ -16,16 +16,25 @@
 
 $(call inherit-product, device/xiaomi/rolex/full_rolex.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/fh/config/common_full_phone.mk)
+# Inherit some common LiquidRemix stuff.
+$(call inherit-product, vendor/liquid/config/common_full_phone.mk)
 
-PRODUCT_NAME := fh_rolex
+PRODUCT_NAME := liquid_rolex
+PRODUCT_DEVICE := rolex
+PRODUCT_MANUFACTURER := Xiaomi
+PRODUCT_BRAND := Xiaomi
+PRODUCT_MODEL := Xiaomi Redmi 4A
 BOARD_VENDOR := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
+LIQUID_BUILDTYPE=RELEASE
+
+PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=Redmi4A PRODUCT_NAME=Redmi4A
+
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="rolex-user 7.1.2 N2G47H V9.2.6.0.NCCMIEK release-keys"
+    DEVICE_MAINTAINERS="Souradeep (Souradeep1996)"
 
 # Set BUILD_FINGERPRINT variable
 BUILD_FINGERPRINT := "Xiaomi/rolex/rolex:7.1.2/N2G47H/V9.2.6.0.NCCMIEK:user/release-keys"

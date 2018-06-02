@@ -21,5 +21,5 @@
 # function: add_lunch_combo generic-eng
 
 for var in eng user userdebug; do
-  add_lunch_combo fh_rolex-$var
+  add_lunch_combo liquid_rolex-$var
 done
